@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Filmoteka</title>
+  </head>
+
+  <body>
+    <!-- Spinner-->
+    <div id="load" class="preloader is-hidden">
+      <div id="inTurnFadingTextG" class="spinner">
+        <div id="inTurnFadingTextG_1" class="inTurnFadingTextG">L</div>
+        <div id="inTurnFadingTextG_2" class="inTurnFadingTextG">o</div>
+        <div id="inTurnFadingTextG_3" class="inTurnFadingTextG">a</div>
+        <div id="inTurnFadingTextG_4" class="inTurnFadingTextG">d</div>
+        <div id="inTurnFadingTextG_5" class="inTurnFadingTextG">i</div>
+        <div id="inTurnFadingTextG_6" class="inTurnFadingTextG">n</div>
+        <div id="inTurnFadingTextG_7" class="inTurnFadingTextG">g</div>
+        <div id="inTurnFadingTextG_8" class="inTurnFadingTextG">.</div>
+        <div id="inTurnFadingTextG_9" class="inTurnFadingTextG">.</div>
+        <div id="inTurnFadingTextG_10" class="inTurnFadingTextG">.</div>
+      </div>
+    </div>
+    <!-- header main -->
+    <header class="header">
+      <div class="container">
+        <div class="header-nav">
+          <a
+            href="./index.html"
+            class="header-nav_logo js-logo-button"
+            id="nav-logo"
+          >
+            <img
+              src="./images/film.png"
+              alt="site logo"
+              width="24"
+              height="24"
+            />
+
+            <h1 class="header-nav_h1">Filmoteka</h1>
+          </a>
+
+          <!-- header-nav_list -->
+          <ul class="header-nav_list">
+            <li class="header-nav_list-item">
+              <!-- navigation_list-item-link nav__btn-active home -->
+              <a
+                href="#"
+                class="header-nav_list-item-link current js-home-button"
+                id="home-page"
+                >HOME</a
+              >
+            </li>
+            <li class="header-nav_list-item">
+              <a
+                href="#"
+                class="header-nav_list-item-link library js-my-library-button"
+                id="library-page"
+                >MY LIBRARY</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <!-- search-form -->
+          <form
+            action=""
+            class="search-film-form js-submit-form"
+            id="search-form"
+            autocomplete="off"
+          >
+            <div class="search-film-inputs">
+              <input
+                type="text"
+                name="search"
+                placeholder="Search"
+                class="input input__form js-input-form"
+              />
+              <input type="submit" name="" value="" class="submit" />
+            </div>
+            <div class="search-film-notifications">
+              <p class="search-film-errors js-search-error is-hidden">
+                Search result not successful. Enter the correct movie name
+              </p>
+              <p class="search-film-errors js-search-all_found is-hidden">
+                These are all the films we found
+              </p>
+            </div>
+          </form>
+        </div>
+        <div class="library-navigation">
+          <button type="button" class="watched-show-btn is-hidden orange">
+            Watched
+          </button>
+          <button type="button" class="queue-show-btn is-hidden">Queue</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="bgr">
+      <div class="container">
+        <ul class="gallery js-gallery js-modal-open"></ul>
+      </div>
+      <div class="container pagination js-pagination-box">
+        <div class="pagination-box js-pagination-box_pages"></div>
+      </div>
+    </main>
+
+    <!-- footer main -->
+    <footer class="footer">
+      <div class="footer-box container">
+        <h4 class="footer-copyright">
+          <span>© 2021 | All Rights Reserved |</span>
+          <span
+            >Developed with
+            <img src="./images/heart.png" alt="heart" width="14" height="14" />
+            by
+            <a href="#" class="film-tooltip-container">
+              <div class="film-tooltip">
+                <div>
+                  <img
+                    src="./images/Katrin.jpg"
+                    alt="photo"
+                    width="50"
+                    height="50"
+                    class="photo"
+                  /><strong>Yekaterina Pavlenko</strong>
+                </div>
+                <div>
+                  <img
+                    src="./images/Yevheniia.jpg"
+                    alt="photo"
+                    width="50"
+                    height="50"
+                    class="photo"
+                  /><strong>Yevheniia Kunytska</strong>
+                </div>
+                <div>
+                  <img
+                    src="./images/Katerina.jpg"
+                    alt="photo"
+                    width="50"
+                    height="50"
+                    class="photo"
+                  /><strong>Katerina Kucheriavenko</strong>
+                </div>
+                <div>
+                  <img
+                    src="./images/Ярик.jpg"
+                    alt="photo"
+                    width="50"
+                    height="50"
+                    class="photo"
+                  /><strong>Yaroslav Tymosh</strong>
+                </div>
+                <div>
+                  <img
+                    src="./images/Liubomir.jpg"
+                    alt="photo"
+                    width="50"
+                    height="50"
+                    class="photo"
+                  /><strong>Liubomyr Kokor</strong>
+                </div>
+                <div>
+                  <img
+                    src="./images/Oksana.jpg"
+                    alt="photo"
+                    width="50"
+                    height="50"
+                    class="photo"
+                  /><strong>Oksana Yurchenkovych</strong>
+                </div>
+                <div>
+                  <img
+                    src="./images/Sergei.jpg"
+                    alt="photo"
+                    width="50"
+                    height="50"
+                    class="photo"
+                  /><strong>Zorin Sergey</strong>
+                </div>
+              </div>
+              GoIT Students</a
+            ></span
+          >
+        </h4>
+        <a class="swipe-up" title="top"></a>
+      </div>
+    </footer>
+
+    <!-- Modal start -->
+    <div class="backdrop is-hidden js-backdrop" data-modal id="modal">
+      <!-- header library -->
+
+      <div class="backdrop_overlay"></div>
+      <div class="modal">
+        <ul class="backdrop-content"></ul>
+      </div>
+
+      <!-- footer library -->
+      <footer class="footer">
+        <div class="footer-box container">
+          <h4 class="footer-copyright">
+            <span>© 2020 | All Rights Reserved |</span>
+            <span
+              >Developed with
+              <img
+                src="./images/heart.png"
+                alt="heart"
+                width="14"
+                height="14"
+              />
+              by
+              <a href="#" class="film-tooltip-container">
+                <div class="film-tooltip">
+                  <div>
+                    <img
+                      src="./images/smiley.png"
+                      alt="photo"
+                      width="18"
+                      height="18"
+                    /><strong>Author:</strong> Slavat1
+                  </div>
+                  <div>
+                    <img
+                      src="./images/smiley.png"
+                      alt="photo"
+                      width="18"
+                      height="18"
+                    /><strong>Author:</strong> Slavat2
+                  </div>
+                  <div>
+                    <img
+                      src="./images/smiley.png"
+                      alt="photo"
+                      width="18"
+                      height="18"
+                    /><strong>Author:</strong> Slavat3
+                  </div>
+                  <div>
+                    <img
+                      src="./images/smiley.png"
+                      alt="photo"
+                      width="18"
+                      height="18"
+                    /><strong>Author:</strong> Slavat4
+                  </div>
+                  <div>
+                    <img
+                      src="./images/smiley.png"
+                      alt="photo"
+                      width="18"
+                      height="18"
+                    /><strong>Author:</strong> Slavat5
+                  </div>
+                  <div>
+                    <img
+                      src="./images/smiley.png"
+                      alt="photo"
+                      width="18"
+                      height="18"
+                    /><strong>Author:</strong> Slavat6
+                  </div>
+                </div>
+                GoIT Students</a
+              ></span
+            >
+          </h4>
+          <a class="swipe-up" title="top"></a>
+        </div>
+      </footer>
+    </div>
+    <!-- Modal end -->
+  </body>
+</html>

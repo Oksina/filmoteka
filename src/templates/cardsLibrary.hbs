@@ -1,0 +1,20 @@
+<li class="gallery-item">
+    <div class="gallery-card">
+        <img src="https://image.tmdb.org/t/p/original{{poster_path}}" alt="{{title}}" class="gallery-image" data-id={{id}}>
+        <div class="trailer-space">
+            <button class="trailer">
+                <div class="trailer-div" data-id="{{id}}"></div>
+            </button>
+        </div>
+        <h2 class="card-title" data-id="{{id}}">{{title}}</h2>
+        <div class="card-content">
+            <ul class="card-movie_genres">
+                {{#each genres}}
+                     <li>{{name}}</li>
+                 {{/each}}
+            </ul>
+             <p>| {{year}}</p>
+            <span class="card-movie_rating">{{vote_average}}</span>
+        </div>
+    </div>
+</li>

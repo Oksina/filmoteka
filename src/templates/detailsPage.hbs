@@ -1,0 +1,41 @@
+<li class="gallery-item modal-item">
+    <div class="gallery-card">
+    <img src="https://image.tmdb.org/t/p/w300{{poster_path}}" alt="{{title}}" class="gallery-image modal-img">
+    </div>
+</li>
+<li class="gallery-item modal-description content-description">
+    <div class="gallery-card">
+    <h2 data-id="{{id}}">{{title}}</h2>
+    <ul class="modal-list">
+        <li>
+            <p class="description-header"> Vote / Votes</p>
+            <p><span class="vote">{{vote_average}}</span> / {{vote_count}}</p>
+        </li>
+        <li>
+            <p class="description-header">Popularity</p>
+            <p>{{popularity}}</p>
+        </li>
+        <li>
+            <p class="description-header">Original Title</p>
+            <p>{{original_title}}</p>
+        </li>
+        <li>
+            <p class="description-header">Genre</p>
+            <ul class="genre-list">
+                {{#each genres}}
+                <li><p>{{name}}</p></li>
+                {{/each}}
+            </ul>
+        </li>
+
+    </ul>
+    <div class="description-overview">
+    <h3 class="about">About</h3>
+    <p class="overview">{{overview}}</p>
+    <ul class="btn-list">
+      <li><button class="modal-btn js-btn watched-btn">add to Watched</button></li>
+      <li><button class="modal-btn js-btn queue-btn">add to queue</button></li>
+    </ul>
+    </div>
+    </div>
+</li>

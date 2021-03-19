@@ -1,0 +1,15 @@
+/*
+ * Все паршалы импортировать в этот файл
+ */
+
+@import './base/normalize';
+@import './base/fonts';
+@import './base/base';
+@import './utils/variable';
+@import './components/header';
+@import './components/homePage';
+@import './components/myFilmLibraryPage';
+@import './components/pagination';
+@import './components/detailsPage';
+@import './components/footer';
+@import './components/spinner';

@@ -1,0 +1,229 @@
+/////////////////////////новые стили для карточек.
+.gallery {
+  padding: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @media screen and (min-width: 1024px) {
+  }
+}
+
+.gallery-item {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33;
+  margin: auto;
+  margin-bottom: 20px;
+
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 30px) / 2);
+  }
+  @media screen and (min-width: 1024px) {
+    width: calc((100% - 30px * 2) / 4);
+    font-size: 8px;
+  }
+}
+.gallery-item:not(:nth-last-child(2n)) {
+  @media screen and (min-width: 768px) {
+  }
+  @media screen and (min-width: 1024px) {
+  }
+}
+.gallery-item:nth-last-child(3n) {
+  @media screen and (min-width: 1024px) {
+  }
+}
+
+.gallery-image {
+  width: 280px;
+  height: 398px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transform: scale(1, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 5px 20px -5px #94a6af;
+  @media screen and (min-width: 768px) {
+    width: 293px;
+  }
+  @media screen and (min-width: 1024px) {
+    //width: 274px;
+    width: 210px;
+    height: 315px;
+  }
+  &:hover,
+  :focus {
+    transform: scale(1.05, 1.05);
+  }
+}
+.card-title {
+  color: black;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  width: 274px;
+  margin-top: 10px;
+  text-align: left;
+  text-transform: uppercase;
+  @media screen and (min-width: 768px) {
+    width: 293px;
+    min-height: 46px;
+  }
+  @media screen and (min-width: 1024px) {
+    max-width: 210px;
+  }
+}
+.card-content {
+  color: #ff6b08;
+  display: flex;
+  margin: 0px;
+  width: 274px;
+  font-size: 10px;
+  @media screen and (min-width: 768px) {
+    width: 293px;
+  }
+  @media screen and (min-width: 1024px) {
+    max-width: 210px;
+  }
+  & p {
+    margin: 0px;
+  }
+  & ul {
+    padding: 0px;
+  }
+}
+
+.card-movie_genres {
+  display: flex;
+  & li {
+    margin-right: 5px;
+  }
+}
+
+.card-movie_rating {
+  width: 36px;
+  margin-left: 16px;
+  border-radius: 5px;
+  background-color: #ff6b01;
+  color: white;
+  text-align: center;
+}
+// TRAILER - BUTTON
+// .trailer-space {
+//   margin: 20px 0 0;
+// }
+.trailer {
+  position: relative;
+  top: 50%;
+  right: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  padding: 20px;
+  margin: 0 auto;
+  border: 0;
+  cursor: pointer;
+  border-radius: 5px;
+  // transform: translateY(-50%);
+  box-shadow: 0 10px 20px -5px #94a6af;
+  overflow: hidden;
+}
+
+.trailer:before,
+.trailer:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.trailer:before {
+  transform: scale(1);
+  background-image: url('../images/movie-mini.jpg');
+  background-size: cover;
+  transition: 0.3s ease transform;
+  z-index: 1;
+}
+
+.trailer:after {
+  background-color: #000;
+  opacity: 0.16;
+  z-index: 2;
+}
+
+.trailer .trailer-div {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+}
+
+.trailer .trailer-div:before,
+.trailer .trailer-div:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 0.4;
+  text-align: center;
+  padding: 15px 0;
+  transition: 0.3s ease all;
+}
+
+.trailer .trailer-div:before {
+  content: 'TRAILER';
+  letter-spacing: 0;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.trailer .trailer-div:after {
+  content: '▶';
+  letter-spacing: -10px;
+  transform: scale(0);
+  opacity: 0;
+}
+
+.trailer:hover:before {
+  transform: scale(1.3);
+}
+
+.trailer:hover .trailer-div:before {
+  letter-spacing: 3px;
+  opacity: 0;
+  transform: scale(4);
+}
+
+.trailer:hover .trailer-div:after {
+  letter-spacing: 0;
+  opacity: 1;
+  transform: scale(1);
+}
+
+///////////////////////////////////////////
+
+.trailer_video {
+  width: 450px;
+  height: 320px;
+
+  @media screen and (max-width: 767px) {
+    width: 700px;
+    height: 394px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 915px;
+    height: 600px;
+  }
+}
